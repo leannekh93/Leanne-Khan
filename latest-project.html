@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Latest Project – Legal Operations | Leanne Khan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--black:#0a0a0a;--purple:#8b5cf6;--purple-light:#a78bfa;--purple-dim:#6d28d9;--white:#ffffff;--gray:#a0a0a0;--card-bg:#111118;--border:rgba(139,92,246,0.2)}
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;background:rgba(10,10,10,0.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+    .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:var(--white);text-decoration:none}
+    .nav-logo span{color:var(--purple)}
+    .nav-links{display:flex;gap:32px;list-style:none}
+    .nav-links a{color:var(--gray);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--white)}
+    .nav-cta{background:var(--purple);color:var(--white)!important;padding:9px 22px;border-radius:100px;font-weight:600!important;font-size:0.85rem!important;transition:background 0.2s!important}
+    .nav-cta:hover{background:var(--purple-dim)!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px}
+
+    .page-header{padding:140px 40px 60px;position:relative;overflow:hidden}
+    .page-header::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(139,92,246,0.12) 0%,transparent 70%);pointer-events:none}
+    .logo-corner{position:absolute;top:100px;right:40px;opacity:0.6}
+    .page-header h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(3rem,8vw,5.5rem);line-height:1.0;letter-spacing:-0.02em}
+    .page-header h1 span{color:var(--purple)}
+    .header-divider{width:100%;height:1px;background:var(--border);margin-top:24px}
+
+    .container{max-width:960px;margin:0 auto;padding:0 40px}
+
+    .section{padding:48px 0}
+    .section-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.1;margin-bottom:20px}
+    .section-title span{color:var(--purple)}
+    .intro-label{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:16px;text-decoration:underline;text-decoration-color:var(--purple);text-underline-offset:4px}
+    p.body-text{color:var(--gray);font-size:1rem;line-height:1.75;margin-bottom:16px;max-width:820px}
+
+    .problems-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin:24px 0}
+    .problems-list li{display:flex;gap:16px;align-items:flex-start;padding:18px 22px;background:var(--card-bg);border:1px solid var(--border);border-radius:12px;color:var(--gray);font-size:0.93rem;line-height:1.65}
+    .problems-list li::before{content:'';display:block;width:6px;height:6px;border-radius:50%;background:var(--purple);margin-top:8px;flex-shrink:0}
+
+    /* PHASE CARDS */
+    .phases{display:flex;flex-direction:column;gap:32px;margin:32px 0}
+    .phase-card{background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:32px 28px;position:relative;overflow:hidden;transition:border-color 0.25s}
+    .phase-card:hover{border-color:var(--purple)}
+    .phase-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--purple)}
+    .phase-num{font-family:'Syne',sans-serif;font-size:0.75rem;font-weight:700;color:var(--purple);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px}
+    .phase-card h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:var(--white);margin-bottom:20px}
+    .phase-row{margin-bottom:12px}
+    .phase-row-label{font-size:0.78rem;font-weight:600;color:var(--purple-light);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px}
+    .phase-row p{color:var(--gray);font-size:0.92rem;line-height:1.6}
+    .phase-row .impact{color:var(--white);font-size:0.92rem}
+
+    /* WORKFLOW IMAGE */
+    .workflow-frame{background:var(--card-bg);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin:32px 0;position:relative}
+    .workflow-frame::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--purple),transparent)}
+    .workflow-frame::after{content:'';position:absolute;top:8px;left:8px;width:20px;height:20px;border-top:2px solid var(--purple);border-left:2px solid var(--purple);border-radius:3px 0 0 0}
+    .workflow-inner{padding:28px;position:relative}
+    .workflow-inner::after{content:'';position:absolute;bottom:8px;right:8px;width:20px;height:20px;border-bottom:2px solid var(--purple);border-right:2px solid var(--purple);border-radius:0 0 3px 0}
+    .img-placeholder{width:100%;min-height:260px;background:linear-gradient(135deg,#1a0a2e,#0d1b2a);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:0.85rem;text-align:center;padding:24px;border:1px dashed var(--border);flex-direction:column;gap:8px}
+    .img-placeholder strong{color:var(--purple-light);font-family:'Syne',sans-serif}
+
+    .cta-banner{background:linear-gradient(135deg,#1a0838 0%,#0d0d1a 100%);border:1px solid var(--border);border-radius:20px;padding:56px 40px;text-align:center;margin:60px 0;position:relative;overflow:hidden}
+    .cta-banner::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:400px;height:300px;background:radial-gradient(circle,rgba(139,92,246,0.25) 0%,transparent 70%);pointer-events:none}
+    .cta-banner h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:14px;position:relative}
+    .cta-banner p{color:var(--gray);font-size:1rem;max-width:480px;margin:0 auto 28px;position:relative}
+    .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--purple);color:var(--white);text-decoration:none;font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:0.06em;text-transform:uppercase;padding:14px 32px;border-radius:100px;transition:background 0.2s,transform 0.2s}
+    .btn-primary:hover{background:var(--purple-dim);transform:translateY(-2px)}
+    .btn-primary .arrow{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(255,255,255,0.15);border-radius:50%}
+
+    footer{border-top:1px solid var(--border);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .footer-left{font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem}
+    .footer-left span{color:var(--purple)}
+    .footer-links{display:flex;gap:24px;list-style:none}
+    .footer-links a{color:var(--gray);text-decoration:none;font-size:0.82rem;transition:color 0.2s}
+    .footer-links a:hover{color:var(--white)}
+
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    @media(max-width:720px){
+      nav{padding:16px 20px}
+      .nav-links{display:none}
+      .hamburger{display:flex}
+      .nav-links.open{display:flex;flex-direction:column;position:fixed;top:61px;left:0;right:0;background:rgba(10,10,10,0.97);padding:24px 20px;gap:20px;border-bottom:1px solid var(--border)}
+      .page-header{padding:120px 20px 40px}
+      .container{padding:0 20px}
+      .logo-corner{display:none}
+      footer{flex-direction:column;text-align:center}
+      .cta-banner{padding:36px 20px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Leanne<span>.</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="featured-project.html">Featured Project</a></li>
+    <li><a href="latest-project.html" class="active">Latest Project</a></li>
+    <li><a href="automations.html">Automations</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Work With Me</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page-header">
+  <div class="logo-corner">
+    <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#8b5cf6"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient></defs>
+      <ellipse cx="50" cy="22" rx="14" ry="22" fill="url(#g1)" opacity="0.8"/>
+      <ellipse cx="50" cy="22" rx="14" ry="22" fill="url(#g1)" opacity="0.8" transform="rotate(72 50 50)"/>
+      <ellipse cx="50" cy="22" rx="14" ry="22" fill="url(#g1)" opacity="0.8" transform="rotate(144 50 50)"/>
+      <ellipse cx="50" cy="22" rx="14" ry="22" fill="url(#g1)" opacity="0.8" transform="rotate(216 50 50)"/>
+      <ellipse cx="50" cy="22" rx="14" ry="22" fill="url(#g1)" opacity="0.8" transform="rotate(288 50 50)"/>
+      <circle cx="50" cy="50" r="10" fill="url(#g1)"/>
+    </svg>
+  </div>
+  <div class="container">
+    <h1>Latest <span>Project</span></h1>
+    <div class="header-divider"></div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- INTRO -->
+  <div class="section reveal">
+    <div class="intro-label">Case Study: Transforming Legal Operations Through Automated Infrastructure</div>
+    <p class="body-text">A fast-growing, boutique legal services practice specialising in direct client support and outsourced attorney services was experiencing severe operational friction. As case volumes increased, the firm's reliance on manual, fragmented administrative processes created severe daily bottlenecks. The manual handling of client intake, physical and digital file management, and uncoordinated financial tracking compromised the firm's operational speed, threatened data privacy standards, and limited executive visibility into live revenue and outstanding collections.</p>
+  </div>
+
+  <!-- KEY PROBLEMS -->
+  <div class="section reveal">
+    <div class="section-title">Key Problems <span>Faced</span></div>
+    <ul class="problems-list">
+      <li>Staff spent significant time manually creating digital client folders, generating repetitive invoice templates, and typing out redundant client intake information across multiple platforms.</li>
+      <li>The practice lacked a centralised ledger to automatically calculate outstanding balances, manage structured payment plans, or track critical disbursements like court and sheriff fees.</li>
+      <li>Without restricted access controls, sensitive legal contracts, case files, and firm-wide financial data were visible to all staff — creating severe data privacy vulnerabilities under strict regulatory standards such as POPIA.</li>
+      <li>Managing critical litigation deadlines, court dates, and multi-staff task delegation across disjointed channels increased the risk of missed dates and human error.</li>
+    </ul>
+  </div>
+
+  <!-- HOW IT SOLVES -->
+  <div class="section">
+    <div class="section-title reveal">How the System <span>Solves</span> These Problems</div>
+
+    <div class="phases">
+      <div class="phase-card reveal">
+        <div class="phase-num">Phase 1</div>
+        <h3>Client Intake &amp; Document Automation</h3>
+        <div class="phase-row">
+          <div class="phase-row-label">Objective</div>
+          <p>Streamline client onboarding and eliminate paperwork bottlenecks.</p>
+        </div>
+        <div class="phase-row">
+          <div class="phase-row-label">Solution</div>
+          <p>Built an automated intake workflow that captures client information, creates digital client records, organises files, and generates invoices and documents automatically.</p>
+        </div>
+        <div class="phase-row">
+          <div class="phase-row-label">Impact</div>
+          <p class="impact">Reduced onboarding time by 30–45 minutes per client, eliminated duplicate data entry, and improved filing consistency.</p>
+        </div>
+      </div>
+
+      <div class="phase-card reveal">
+        <div class="phase-num">Phase 2</div>
+        <h3>Matter &amp; Financial Management</h3>
+        <div class="phase-row">
+          <div class="phase-row-label">Objective</div>
+          <p>Centralise case tracking and financial management.</p>
+        </div>
+        <div class="phase-row">
+          <div class="phase-row-label">Solution</div>
+          <p>Developed a live dashboard to manage legal matters, track deadlines, monitor case progress, and automate all record keeping — including staff commission calculations.</p>
+        </div>
+        <div class="phase-row">
+          <div class="phase-row-label">Impact</div>
+          <p class="impact">Reduced administrative workload, improved financial visibility, and eliminated the risk of missed deadlines.</p>
+        </div>
+      </div>
+
+      <div class="phase-card reveal">
+        <div class="phase-num">Phase 3</div>
+        <h3>Security &amp; Automated Collections</h3>
+        <div class="phase-row">
+          <div class="phase-row-label">Objective</div>
+          <p>Strengthen data security and improve cash flow management.</p>
+        </div>
+        <div class="phase-row">
+          <div class="phase-row-label">Solution</div>
+          <p>Implemented restricted access controls to protect sensitive client information and automated payment reminder workflows for overdue accounts.</p>
+        </div>
+        <div class="phase-row">
+          <div class="phase-row-label">Impact</div>
+          <p class="impact">Enhanced client confidentiality, supported compliance requirements, and improved debt collection through automated follow-ups.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- System diagram image -->
+    <div class="workflow-frame reveal">
+      <div class="workflow-inner">
+        <!-- REPLACE: <img src="assets/legal-system.jpg" alt="Legal operations system diagram" class="workflow-img" style="width:100%;border-radius:8px;display:block;"/> -->
+        <div class="img-placeholder">
+          <strong>📊 System Architecture Diagram</strong>
+          Replace with:<br/><code>assets/legal-system.jpg</code>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-banner reveal">
+    <h2>Is your practice losing time to manual admin?</h2>
+    <p>Let's build infrastructure that handles intake, finances, and compliance — so your team can focus on clients, not paperwork.</p>
+    <a href="mailto:hello@leannekhan.com" class="btn-primary">
+      Get In Touch <span class="arrow">→</span>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-left">Leanne<span> Khan</span></div>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="featured-project.html">Featured Project</a></li>
+    <li><a href="latest-project.html">Latest Project</a></li>
+    <li><a href="automations.html">Automations</a></li>
+  </ul>
+  <div style="color:var(--gray);font-size:0.8rem">© 2026 Leanne Khan</div>
+</footer>
+
+<script>
+  const hamburger=document.getElementById('hamburger');
+  const navLinks=document.getElementById('navLinks');
+  hamburger.addEventListener('click',()=>navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+  const reveals=document.querySelectorAll('.reveal');
+  const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.1});
+  reveals.forEach(r=>observer.observe(r));
+</script>
+</body>
+</html>
