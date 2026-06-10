@@ -34,7 +34,7 @@
     .hero::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(139,92,246,0.18) 0%, transparent 70%); pointer-events: none; }
     .hero-logo { width: 90px; height: 90px; margin-bottom: 28px; animation: floatLogo 4s ease-in-out infinite; }
     @keyframes floatLogo { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-    .hero-name { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(3.2rem, 10vw, 6.5rem); line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 12px; animation: fadeUp 0.8s ease both; }
+    .hero-name { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.2rem,6vw,4rem); line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 12px; animation: fadeUp 0.8s ease both; }
     .hero-name span { display: inline-block; width: 3px; height: 0.85em; background: var(--purple); margin-left: 8px; vertical-align: middle; animation: blink 1.2s step-end infinite; }
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
     .hero-tagline { font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: clamp(1rem, 3vw, 1.25rem); color: var(--gray); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 40px; animation: fadeUp 0.8s 0.15s ease both; }
@@ -51,12 +51,12 @@
     /* SHARED */
     section { padding: 90px 24px; }
     .container { max-width: 900px; margin: 0 auto; }
-    .section-label { font-family: 'Syne', sans-serif; font-size: clamp(2.8rem, 8vw, 4.5rem); font-weight: 800; line-height: 1.05; margin-bottom: 10px; }
+    .section-label { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem,4vw,2.8rem); font-weight: 800; line-height: 1.05; margin-bottom: 10px; }
     .section-label .accent { color: var(--purple); }
     .section-divider { width: 60px; height: 2px; background: var(--purple); margin-bottom: 40px; }
 
     /* ABOUT */
-    .about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; align-items: start; }
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: start; max-width: 720px; }
     .about-photo-wrap { width: 100%; max-width: 320px; }
     .about-photo-wrap img { width: 100%; border-radius: 16px; display: block; object-fit: cover; }
     .about-text p { color: var(--gray); font-size: 1.05rem; line-height: 1.75; margin-bottom: 20px; }
@@ -184,9 +184,7 @@
     <div class="section-divider reveal"></div>
     <div class="about-grid">
 
-      <div class="about-photo-wrap reveal">
-        <img src="assets/leanne.jpg" alt="Leanne Khan" />
-      </div>
+
 
       <div class="about-text reveal">
         <p>I help <strong>busy founders and solo service providers</strong> automate manual administrative tasks and outreach without losing brand voice. I build smart systems that optimize sales tracking and grow your business without the chaotic overhead.</p>
@@ -231,6 +229,7 @@
     <div style="text-align:center;" class="reveal">
       <a href="featured-project.html" class="btn-secondary">See a Real Case Study →</a>
     </div>
+
   </div>
 </section>
 
