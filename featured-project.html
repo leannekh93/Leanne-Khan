@@ -6,7 +6,7 @@
   <title>Featured Project – Legal Operations | Leanne Khan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--black:#0a0a0a;--purple:#8b5cf6;--purple-light:#a78bfa;--purple-dim:#6d28d9;--white:#ffffff;--gray:#a0a0a0;--card-bg:#111118;--border:rgba(139,92,246,0.2)}
@@ -14,7 +14,7 @@
     body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden}
 
     nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;background:rgba(10,10,10,0.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
-    .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:var(--white);text-decoration:none}
+    .nav-logo{font-family:'Inter',sans-serif;font-weight:800;font-size:1.1rem;color:var(--white);text-decoration:none}
     .nav-logo span{color:var(--purple)}
     .nav-links{display:flex;gap:32px;list-style:none}
     .nav-links a{color:var(--gray);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s}
@@ -27,16 +27,16 @@
     .page-header{padding:140px 40px 60px;position:relative;overflow:hidden}
     .page-header::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(139,92,246,0.12) 0%,transparent 70%);pointer-events:none}
     .logo-corner{position:absolute;top:100px;right:40px;opacity:0.6}
-    .page-header h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2rem,5vw,3.2rem);line-height:1.0;letter-spacing:-0.02em}
+    .page-header h1{font-family:'Inter',sans-serif;font-weight:800;font-size:clamp(2rem,5vw,3.2rem);line-height:1.0;letter-spacing:-0.02em}
     .page-header h1 span{color:var(--purple)}
     .header-divider{width:100%;height:1px;background:var(--border);margin-top:24px}
 
     .container{max-width:960px;margin:0 auto;padding:0 40px}
 
     .section{padding:48px 0}
-    .section-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.1;margin-bottom:20px}
+    .section-title{font-family:'Inter',sans-serif;font-weight:800;font-size:clamp(1.3rem,3vw,2rem);line-height:1.1;margin-bottom:20px}
     .section-title span{color:var(--purple)}
-    .intro-label{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:16px;text-decoration:underline;text-decoration-color:var(--purple);text-underline-offset:4px}
+    .intro-label{font-family:'Inter',sans-serif;font-weight:700;font-size:1rem;color:var(--white);margin-bottom:16px;text-decoration:underline;text-decoration-color:var(--purple);text-underline-offset:4px}
     p.body-text{color:var(--gray);font-size:1rem;line-height:1.75;margin-bottom:16px;max-width:820px}
 
     .problems-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin:24px 0}
@@ -48,8 +48,8 @@
     .phase-card{background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:32px 28px;position:relative;overflow:hidden;transition:border-color 0.25s}
     .phase-card:hover{border-color:var(--purple)}
     .phase-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--purple)}
-    .phase-num{font-family:'Syne',sans-serif;font-size:0.75rem;font-weight:700;color:var(--purple);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px}
-    .phase-card h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;color:var(--white);margin-bottom:20px}
+    .phase-num{font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:700;color:var(--purple);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px}
+    .phase-card h3{font-family:'Inter',sans-serif;font-weight:700;font-size:1.1rem;color:var(--white);margin-bottom:20px}
     .phase-row{margin-bottom:12px}
     .phase-row-label{font-size:0.78rem;font-weight:600;color:var(--purple-light);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px}
     .phase-row p{color:var(--gray);font-size:0.92rem;line-height:1.6}
@@ -62,18 +62,18 @@
     .workflow-inner{padding:28px;position:relative}
     .workflow-inner::after{content:'';position:absolute;bottom:8px;right:8px;width:20px;height:20px;border-bottom:2px solid var(--purple);border-right:2px solid var(--purple);border-radius:0 0 3px 0}
     .img-placeholder{width:100%;min-height:260px;background:linear-gradient(135deg,#1a0a2e,#0d1b2a);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:0.85rem;text-align:center;padding:24px;border:1px dashed var(--border);flex-direction:column;gap:8px}
-    .img-placeholder strong{color:var(--purple-light);font-family:'Syne',sans-serif}
+    .img-placeholder strong{color:var(--purple-light);font-family:'Inter',sans-serif}
 
     .cta-banner{background:linear-gradient(135deg,#1a0838 0%,#0d0d1a 100%);border:1px solid var(--border);border-radius:20px;padding:56px 40px;text-align:center;margin:60px 0;position:relative;overflow:hidden}
     .cta-banner::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:400px;height:300px;background:radial-gradient(circle,rgba(139,92,246,0.25) 0%,transparent 70%);pointer-events:none}
-    .cta-banner h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:14px;position:relative}
+    .cta-banner h2{font-family:'Inter',sans-serif;font-weight:800;font-size:clamp(1.2rem,2.5vw,1.8rem);margin-bottom:14px;position:relative}
     .cta-banner p{color:var(--gray);font-size:1rem;max-width:480px;margin:0 auto 28px;position:relative}
-    .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--purple);color:var(--white);text-decoration:none;font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:0.06em;text-transform:uppercase;padding:14px 32px;border-radius:100px;transition:background 0.2s,transform 0.2s}
+    .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--purple);color:var(--white);text-decoration:none;font-family:'Inter',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:0.06em;text-transform:uppercase;padding:14px 32px;border-radius:100px;transition:background 0.2s,transform 0.2s}
     .btn-primary:hover{background:var(--purple-dim);transform:translateY(-2px)}
     .btn-primary .arrow{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(255,255,255,0.15);border-radius:50%}
 
     footer{border-top:1px solid var(--border);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
-    .footer-left{font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem}
+    .footer-left{font-family:'Inter',sans-serif;font-weight:700;font-size:0.9rem}
     .footer-left span{color:var(--purple)}
     .footer-links{display:flex;gap:24px;list-style:none}
     .footer-links a{color:var(--gray);text-decoration:none;font-size:0.82rem;transition:color 0.2s}
@@ -217,8 +217,8 @@
   <!-- LIVE DEMO -->
   <div class="reveal" style="background:var(--card-bg);border:1px solid var(--border);border-radius:20px;padding:40px;margin:48px 0;text-align:center;position:relative;overflow:hidden;">
     <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--purple),transparent);"></div>
-    <div style="font-family:'Syne',sans-serif;font-size:0.75rem;font-weight:700;color:var(--purple);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;">Live Demo</div>
-    <h2 style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:12px;">See the System in Action</h2>
+    <div style="font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:700;color:var(--purple);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;">Live Demo</div>
+    <h2 style="font-family:'Inter',sans-serif;font-weight:700;font-size:1.2rem;margin-bottom:12px;">See the System in Action</h2>
     <p style="color:var(--gray);font-size:1rem;max-width:500px;margin:0 auto 10px;">Explore the fully functional ParaBot legal operations dashboard — the same system built for Cape Paralegal Services.</p>
     <p style="color:var(--gray);font-size:0.9rem;margin-bottom:28px;">Access code: <span style="font-family:'DM Mono',monospace;background:rgba(139,92,246,0.12);color:var(--purple-light);padding:3px 10px;border-radius:6px;border:1px solid var(--border);">CPS2026</span></p>
     <a href="parabot.html" target="_blank" class="btn-primary">
