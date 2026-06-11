@@ -6,7 +6,7 @@
   <title>Leanne Khan | AI Automations & Workflow Optimization</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -19,7 +19,7 @@
 
     /* NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 18px 40px; background: rgba(10,10,10,0.85); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
-    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--white); text-decoration: none; }
+    .nav-logo { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--white); text-decoration: none; }
     .nav-logo span { color: var(--purple); }
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a { color: var(--gray); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
@@ -34,15 +34,15 @@
     .hero::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(139,92,246,0.18) 0%, transparent 70%); pointer-events: none; }
     .hero-logo { width: 90px; height: 90px; margin-bottom: 28px; animation: floatLogo 4s ease-in-out infinite; }
     @keyframes floatLogo { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-    .hero-name { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.2rem,6vw,4rem); line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 12px; animation: fadeUp 0.8s ease both; }
+    .hero-name { font-family: 'Inter', sans-serif; font-weight: 800; font-size: clamp(1.6rem,4vw,2.8rem); line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 12px; animation: fadeUp 0.8s ease both; }
     .hero-name span { display: inline-block; width: 3px; height: 0.85em; background: var(--purple); margin-left: 8px; vertical-align: middle; animation: blink 1.2s step-end infinite; }
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-    .hero-tagline { font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: clamp(1rem, 3vw, 1.25rem); color: var(--gray); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 40px; animation: fadeUp 0.8s 0.15s ease both; }
+    .hero-tagline { font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: clamp(0.85rem, 2vw, 1rem); color: var(--gray); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 40px; animation: fadeUp 0.8s 0.15s ease both; }
     .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; animation: fadeUp 0.8s 0.3s ease both; }
-    .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--purple); color: var(--white); text-decoration: none; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px 32px; border-radius: 100px; transition: background 0.2s, transform 0.2s; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--purple); color: var(--white); text-decoration: none; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px 32px; border-radius: 100px; transition: background 0.2s, transform 0.2s; }
     .btn-primary:hover { background: var(--purple-dim); transform: translateY(-2px); }
     .btn-primary .arrow { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: rgba(255,255,255,0.15); border-radius: 50%; }
-    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--white); text-decoration: none; font-family: 'Syne', sans-serif; font-weight: 600; font-size: 0.9rem; padding: 14px 28px; border-radius: 100px; border: 1px solid var(--border); transition: border-color 0.2s, color 0.2s, transform 0.2s; }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--white); text-decoration: none; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9rem; padding: 14px 28px; border-radius: 100px; border: 1px solid var(--border); transition: border-color 0.2s, color 0.2s, transform 0.2s; }
     .btn-secondary:hover { border-color: var(--purple); color: var(--purple-light); transform: translateY(-2px); }
     .scroll-hint { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--gray); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; animation: fadeUp 1s 0.6s ease both; }
     .scroll-dot { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--purple), transparent); animation: scrollPulse 2s ease-in-out infinite; }
@@ -51,12 +51,12 @@
     /* SHARED */
     section { padding: 90px 24px; }
     .container { max-width: 900px; margin: 0 auto; }
-    .section-label { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem,4vw,2.8rem); font-weight: 800; line-height: 1.05; margin-bottom: 10px; }
+    .section-label { font-family: 'Inter', sans-serif; font-size: clamp(1.4rem,3vw,2.2rem); font-weight: 800; line-height: 1.05; margin-bottom: 10px; }
     .section-label .accent { color: var(--purple); }
     .section-divider { width: 60px; height: 2px; background: var(--purple); margin-bottom: 40px; }
 
     /* ABOUT */
-    .about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; align-items: start; }
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: start; max-width: 720px; }
     .about-photo-wrap { width: 100%; max-width: 320px; }
     .about-photo-wrap img { width: 100%; border-radius: 16px; display: block; object-fit: cover; }
     .about-text p { color: var(--gray); font-size: 1.05rem; line-height: 1.75; margin-bottom: 20px; }
@@ -67,7 +67,7 @@
     /* STATS BAR */
     .stats-bar { background: var(--card-bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 24px; }
     .stats-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; text-align: center; }
-    .stat-num { font-family: 'Syne', sans-serif; font-size: 2.8rem; font-weight: 800; color: var(--purple-light); line-height: 1; margin-bottom: 6px; }
+    .stat-num { font-family: 'Inter', sans-serif; font-size: 2.8rem; font-weight: 800; color: var(--purple-light); line-height: 1; margin-bottom: 6px; }
     .stat-label { font-size: 0.85rem; color: var(--gray); letter-spacing: 0.04em; }
 
     /* SERVICES */
@@ -75,18 +75,18 @@
     .service-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 28px 24px; transition: border-color 0.25s, transform 0.25s; }
     .service-card:hover { border-color: var(--purple); transform: translateY(-4px); }
     .service-icon { font-size: 1.6rem; margin-bottom: 14px; }
-    .service-card h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; color: var(--white); }
+    .service-card h3 { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; color: var(--white); }
     .service-card p { font-size: 0.9rem; color: var(--gray); line-height: 1.6; }
 
     /* CTA BANNER */
     .cta-banner { background: linear-gradient(135deg, #1a0838 0%, #0d0d1a 100%); border: 1px solid var(--border); border-radius: 20px; padding: 56px 40px; text-align: center; position: relative; overflow: hidden; }
     .cta-banner::before { content: ''; position: absolute; top: -80px; left: 50%; transform: translateX(-50%); width: 400px; height: 300px; background: radial-gradient(circle, rgba(139,92,246,0.25) 0%, transparent 70%); pointer-events: none; }
-    .cta-banner h2 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.8rem, 5vw, 2.6rem); margin-bottom: 16px; position: relative; }
+    .cta-banner h2 { font-family: 'Inter', sans-serif; font-weight: 800; font-size: clamp(1.2rem, 2.5vw, 1.8rem); margin-bottom: 16px; position: relative; }
     .cta-banner p { color: var(--gray); font-size: 1rem; max-width: 480px; margin: 0 auto 32px; position: relative; }
 
     /* FOOTER */
     footer { border-top: 1px solid var(--border); padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .footer-left { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; }
+    .footer-left { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.9rem; }
     .footer-left span { color: var(--purple); }
     .footer-links { display: flex; gap: 24px; list-style: none; }
     .footer-links a { color: var(--gray); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
@@ -184,9 +184,7 @@
     <div class="section-divider reveal"></div>
     <div class="about-grid">
 
-      <div class="about-photo-wrap reveal">
-        <img src="assets/leanne.jpg" alt="Leanne Khan" />
-      </div>
+
 
       <div class="about-text reveal">
         <p>I help <strong>busy founders and solo service providers</strong> automate manual administrative tasks and outreach without losing brand voice. I build smart systems that optimize sales tracking and grow your business without the chaotic overhead.</p>
